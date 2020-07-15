@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "calorie-counter-61d89": {
+      "hosting": {
+        "calorie-counter": [
+          "calorie-counter-61d89"
+        ]
+      }
+    }
+  }
+}
