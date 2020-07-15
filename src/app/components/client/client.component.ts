@@ -8,7 +8,10 @@ import { ClientService } from '../../services/client.service';
   styleUrls: ['./client.component.css'],
 })
 export class ClientComponent implements OnInit {
-  constructor() {}
+  clients: Client[];
+  constructor(private c: ClientService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.c.getClients().subscribe((payload) => (this.clients = payload));
+  }
 }
