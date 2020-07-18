@@ -1,0 +1,63 @@
+<div class="row">
+  <div class="col-md-6">
+    <a routerLink="/" class="btn btn-link">
+      <i class="fa fa-arrow-circle-o-left"></i> Back To Dashboard
+    </a>
+  </div>
+  <div class="col-md-6"></div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    Add Client
+  </div>
+  <div class="card-body">
+    <form #foodForm="ngForm" (ngSubmit)="onSubmit(foodForm)">
+      <div class="form-group">
+        <label for="foodName">First Name</label>
+        <input
+          type="text"
+          class="form-control"
+          name="foodName"
+          #fName="ngModel"
+          [ngClass]="{ 'is-invalid': fName.errors && fName.touched }"
+          [(ngModel)]="client.food"
+          minlength="2"
+          required
+        />
+
+        <div [hidden]="!fName.errors?.required" class="invalid-feedback">
+          Food required
+        </div>
+
+        <div [hidden]="!fName.errors?.minlength" class="invalid-feedback">
+          Must be at least 2 characters
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="calories">Calories</label>
+        <input
+          type="text"
+          class="form-control"
+          name="calories"
+          #calories="ngModel"
+          [ngClass]="{ 'is-invalid': calories.errors && calories.touched }"
+          [(ngModel)]="client.calories"
+          minlength="2"
+          required
+        />
+
+        <div [hidden]="!calories.errors?.required" class="invalid-feedback">
+          Last name required
+        </div>
+
+        <div [hidden]="!calories.errors?.minlength" class="invalid-feedback">
+          Must be at least 2 characters
+        </div>
+      </div>
+
+      <input type="submit" value="Submit" class="btn btn-primary btn-block" />
+    </form>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 export interface Client {
   id?: string;
-  fireName?: string;
-  lastName?: string;
+  food?: string;
+  calories?: number;
 }

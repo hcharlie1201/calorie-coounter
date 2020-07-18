@@ -1,1 +1,44 @@
-<h2><i class="fa fa-users">Clients</i></h2>
+<head>
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.13.1/css/v4-shims.css"
+  />
+</head>
+
+<div class="row">
+  <div class="col-md-6">
+    <h2><i class="fa fa-users"></i>Food Tracker</h2>
+  </div>
+  <div class="col-md-6 text-secondary">
+    <h5>Total Calories {{ getTotalCalories() }}</h5>
+  </div>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Food</th>
+      <th>Calories</th>
+      <th>Info</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let client of clients">
+      <td>{{ client.food }}</td>
+      <td>{{ client.calories }}</td>
+      <td>
+        <button
+          type="button"
+          class="btn btn-info"
+          routerLink="client/info/{{ client.id }}"
+        >
+          Details<i class="fas fa-camera"></i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
