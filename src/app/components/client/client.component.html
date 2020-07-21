@@ -11,10 +11,10 @@
 
 <div class="row">
   <div class="col-md-6">
-    <h2><i class="fa fa-users"></i>Food Tracker</h2>
+    <h2><i class="fas fa-hamburger"></i>Food Tracker</h2>
   </div>
   <div class="col-md-6 text-secondary">
-    <h5>Total Calories {{ getTotalCalories() }}</h5>
+    <h5>Total Calories: {{ getTotalCalories() | number }}</h5>
   </div>
 </div>
 
@@ -34,7 +34,7 @@
         <button
           type="button"
           class="btn btn-info"
-          routerLink="client/info/{{ client.id }}"
+          routerLink="client/{{ client.id }}"
         >
           Details<i class="fas fa-camera"></i>
         </button>

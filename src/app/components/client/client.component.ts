@@ -18,7 +18,7 @@ export class ClientComponent implements OnInit {
 
   getTotalCalories() {
     const reducer = (accumulator, currentValue) =>
-      accumulator + currentValue.calories;
+      accumulator + parseInt(currentValue.calories);
     this.totalCalories = this.clients.reduce(reducer, 0);
     return this.totalCalories;
   }
