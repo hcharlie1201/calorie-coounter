@@ -14,6 +14,10 @@ export const environment = {
     appId: '1:1071941211869:web:5a058ef21dcc9a5ef42d34',
     measurementId: 'G-LGPVR4QNBR',
   },
+  nutrition: {
+    id: 'fc76ed94',
+    keys: '9d1e7ec7f0402b0203aacdfb916a3c20',
+  },
 };
 
 /*

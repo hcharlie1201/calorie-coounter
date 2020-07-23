@@ -2,6 +2,19 @@
   <div class="card-body">
     <h5 class="card-title">Food: {{ client.food }}</h5>
     <h6 class="card-subtitle mb-2 text-muted">Nutrition</h6>
-    <p class="card-text">Calories: {{ client.calories }}</p>
+    <p class="card-text bg-primary">Calories: {{ client.calories }}</p>
+    <p class="card-text">Serving Quantity: {{ foods.serving_qty }}</p>
+    <p class="card-text">Serving Unit: {{ foods.serving_unit }}</p>
+    <p class="card-text">
+      Serving Weight Grams: {{ foods.serving_weight_grams }}
+    </p>
+    <p class="card-text">Total Fat: {{ foods.nf_total_fat }}</p>
+    <p class="card-text">Saturated Fat Fat: {{ foods.nf_saturated_fat }}</p>
+    <p class="card-text">Cholesterol: {{ foods.nf_cholesterol }}</p>
+    <p class="card-text">Sodium: {{ foods.nf_sodium }}</p>
+    <p class="card-text">
+      Total Carbohydrate: {{ foods.nf_total_carbohydrate }}
+    </p>
+    <p class="card-text">Dietary Fiber: {{ foods.nf_dietary_fiber }}</p>
   </div>
 </div>

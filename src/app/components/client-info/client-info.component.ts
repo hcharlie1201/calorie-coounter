@@ -14,7 +14,18 @@ import { Foods } from '../../models/Foods';
 export class ClientInfoComponent implements OnInit {
   id: string;
   client: Client;
-  food: string;
+  foods: Foods = {
+    food_name: 'uh',
+    serving_qty: 0,
+    serving_unit: '1',
+    serving_weight_grams: 0,
+    nf_total_fat: 0,
+    nf_saturated_fat: 0,
+    nf_cholesterol: 0,
+    nf_sodium: 0,
+    nf_total_carbohydrate: 0,
+    nf_dietary_fiber: 0,
+  };
 
   constructor(
     private clientservice: ClientService,
@@ -25,12 +36,11 @@ export class ClientInfoComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
-    this.food = this.route.snapshot.params['food'];
     this.clientservice.getClient(this.id).subscribe((client) => {
       this.client = client;
+      this.clientservice
+        .getNutrition(this.client.food)
+        .subscribe((foods) => (this.foods = foods.foods[0]));
     });
-    this.clientservice
-      .getNutrition(this.food)
-      .subscribe((foods) => console.log(foods));
   }
 }
