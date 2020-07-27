@@ -9,16 +9,16 @@
 
 <div class="card">
   <div class="card-header">
-    Add Client
+    Add Food for Client
   </div>
   <div class="card-body">
     <form #foodForm="ngForm" (ngSubmit)="onSubmit(foodForm)">
       <div class="form-group">
-        <label for="foodName">First Name</label>
+        <label for="foodName">Food Name</label>
         <input
           type="text"
           class="form-control"
-          name="foodName"
+          name="food"
           #fName="ngModel"
           [ngClass]="{ 'is-invalid': fName.errors && fName.touched }"
           [(ngModel)]="client.food"

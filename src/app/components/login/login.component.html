@@ -1,1 +1,32 @@
-<form action=""></form>
+<div class="row">
+  <div class="col-md-6 mx-auto">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="text-center">Login</h2>
+      </div>
+      <form (submit)="onSubmit()">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="username"
+            [(ngModel)]="email"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            [(ngModel)]="password"
+            class="form-control"
+          />
+        </div>
+        <input type="submit" value="Login" class="btn btn-primary btn-block" />
+      </form>
+    </div>
+  </div>
+</div>

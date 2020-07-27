@@ -61,10 +61,15 @@ export class ClientService {
       'x-app-key': environment.nutrition.keys,
     });
     let options = { headers: headers };
-    return this.http.post(url, { query: 'apple' }, options).pipe(
+    return this.http.post(url, { query }, options).pipe(
       map((res) => {
         return res;
       })
     );
+  }
+
+  removeClient(client: Client) {
+    this.clientDoc = this.firestore.doc(`clients/${client.id}`);
+    this.clientDoc.delete;
   }
 }

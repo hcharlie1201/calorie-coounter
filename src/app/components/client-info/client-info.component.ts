@@ -43,4 +43,15 @@ export class ClientInfoComponent implements OnInit {
         .subscribe((foods) => (this.foods = foods.foods[0]));
     });
   }
+
+  onDeleteClick() {
+    if (confirm('Are you sure you want to delete?')) {
+      this.clientservice.removeClient(this.client);
+    }
+    this.flashmessage.show('Client Removed', {
+      cssClass: 'alert-success',
+      timeout: 1000,
+    });
+    this.router.navigate(['/']);
+  }
 }

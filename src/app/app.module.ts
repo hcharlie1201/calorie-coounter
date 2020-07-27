@@ -14,7 +14,6 @@ import { LoginComponent } from './components/login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AddFoodComponent } from './components/add-food/add-food.component';
-import { EditClientComponent } from './components/edit-client/edit-client.component';
 import { ClientInfoComponent } from './components/client-info/client-info.component';
 import { ClientComponent } from './components/client/client.component';
 import { RegisterComponent } from './components/register/register.component';
@@ -26,7 +25,6 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     LoginComponent,
     NavbarComponent,
     DashboardComponent,
-    EditClientComponent,
     ClientInfoComponent,
     RegisterComponent,
     ClientComponent,

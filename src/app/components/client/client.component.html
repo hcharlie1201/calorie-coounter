@@ -14,11 +14,11 @@
     <h2><i class="fas fa-hamburger"></i>Food Tracker</h2>
   </div>
   <div class="col-md-6 text-secondary">
-    <h5>Total Calories: {{ getTotalCalories() | number }}</h5>
+    <h5>Total Calories: {{ totalCalories | number }}</h5>
   </div>
 </div>
 
-<table class="table">
+<table *ngIf="clients.length > 0; else noClients" class="table">
   <thead>
     <tr>
       <th>Food</th>
@@ -42,3 +42,8 @@
     </tr>
   </tbody>
 </table>
+
+<ng-template #noClients>
+  <hr />
+  <h5>There are no clients in the system</h5>
+</ng-template>
