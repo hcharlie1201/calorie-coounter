@@ -8,8 +8,8 @@ import { ClientService } from '../../services/client.service';
   styleUrls: ['./client.component.css'],
 })
 export class ClientComponent implements OnInit {
-  clients: Client[];
-  totalCalories: number;
+  clients: Client[] = [];
+  totalCalories: number = 0;
 
   constructor(private c: ClientService) {}
 

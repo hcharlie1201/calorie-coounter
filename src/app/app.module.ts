@@ -19,6 +19,9 @@ import { ClientComponent } from './components/client/client.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 
+import { ClientService } from './services/client.service';
+import { AuthService } from './services/auth.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +47,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     FlashMessagesModule.forRoot(),
     FormsModule,
   ],
-  providers: [],
+  providers: [ClientService, AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
